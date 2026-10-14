@@ -1,0 +1,23 @@
+"""Відкриті приклади (вони є на картках варіантів). Повний набір - у викладача."""
+
+CASES = [{'v': 1,
+  'public': True,
+  'parent': {'SPT_A': '1'},
+  'prefix': 'SPT_',
+  'set': {'SPT_B': '2'},
+  'unset': [],
+  'expected': ['SPT_A=1', 'SPT_B=2']},
+ {'v': 2,
+  'public': True,
+  'parent': {'SPT_A': '1', 'SPT_B': '2', 'SPT_C': '3'},
+  'prefix': 'SPT_',
+  'set': {},
+  'unset': ['SPT_B'],
+  'expected': ['SPT_A=1', 'SPT_C=3']},
+ {'v': 3,
+  'public': True,
+  'parent': {'SPT_A': '1', 'SPT_B': '2'},
+  'prefix': 'SPT_',
+  'set': {'SPT_C': 'a b'},
+  'unset': ['SPT_A'],
+  'expected': ['SPT_B=2', 'SPT_C=a b']}]

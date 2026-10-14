@@ -1,0 +1,20 @@
+"""Відкриті приклади (вони є на картках варіантів). Повний набір - у викладача."""
+
+CASES = [{'v': 1,
+  'public': True,
+  'commands': [['sh', '-c', 'sleep 0.6; exit 1'],
+               ['sh', '-c', 'sleep 0.1; exit 2'],
+               ['sh', '-c', 'sleep 0.3; exit 3']],
+  'codes': [1, 2, 3],
+  'first': 1,
+  'max_time': 0.9},
+ {'v': 2,
+  'public': True,
+  'commands': [['sh', '-c', 'sleep 0.4; exit 0'], ['no_such_prog_zz']],
+  'codes': [0, 127],
+  'first': 1},
+ {'v': 3,
+  'public': True,
+  'commands': [['sh', '-c', 'sleep 0.4; kill -s KILL $$'], ['sh', '-c', 'sleep 0.1; exit 0']],
+  'codes': [-9, 0],
+  'first': 1}]
